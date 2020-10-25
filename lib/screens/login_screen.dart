@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
+import 'chat_screen.dart';
+
 class LoginScreen extends StatefulWidget {
+  static const String id = 'login';
+
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
@@ -16,16 +20,19 @@ class _LoginScreenState extends State<LoginScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Container(
-              height: 200.0,
-              child: Image.asset('images/logo.png'),
+            Hero(
+              tag: 'logo',
+              child: Container(
+                height: 200.0,
+                child: Image.asset('images/logo.png'),
+              ),
             ),
             SizedBox(
               height: 48.0,
             ),
             TextField(
               onChanged: (value) {
-                //Do something with the user input.
+                //todo: Do something with the user input.
               },
               decoration: InputDecoration(
                 hintText: 'Enter your email',
@@ -51,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             TextField(
               onChanged: (value) {
-                //Do something with the user input.
+                //todo: Do something with the user input.
               },
               decoration: InputDecoration(
                 hintText: 'Enter your password.',
@@ -83,7 +90,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 elevation: 5.0,
                 child: MaterialButton(
                   onPressed: () {
-                    //Implement login functionality.
+                    Navigator.pushNamed(context, ChatScreen.id);
+                    //todo: Implement login functionality.
                   },
                   minWidth: 200.0,
                   height: 42.0,

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
+import 'chat_screen.dart';
+
 class RegistrationScreen extends StatefulWidget {
+  static const String id = 'register';
+
   @override
   _RegistrationScreenState createState() => _RegistrationScreenState();
 }
@@ -16,16 +20,19 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Container(
-              height: 200.0,
-              child: Image.asset('images/logo.png'),
+            Hero(
+              tag: 'logo',
+              child: Container(
+                height: 200.0,
+                child: Image.asset('images/logo.png'),
+              ),
             ),
             SizedBox(
               height: 48.0,
             ),
             TextField(
               onChanged: (value) {
-                //Do something with the user input.
+                //todo: Do something with the user input.
               },
               decoration: InputDecoration(
                 hintText: 'Enter your email',
@@ -49,7 +56,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             ),
             TextField(
               onChanged: (value) {
-                //Do something with the user input.
+                //todo: Do something with the user input.
               },
               decoration: InputDecoration(
                 hintText: 'Enter your password',
@@ -79,7 +86,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 elevation: 5.0,
                 child: MaterialButton(
                   onPressed: () {
-                    //Implement registration functionality.
+                    //todo: Implement registration functionality.
+                    Navigator.pushNamed(context, ChatScreen.id);
                   },
                   minWidth: 200.0,
                   height: 42.0,

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flash_chat/constants.dart';
 
 class ChatScreen extends StatefulWidget {
+  static const String id = 'chat';
+
   @override
   _ChatScreenState createState() => _ChatScreenState();
 }
@@ -16,7 +18,7 @@ class _ChatScreenState extends State<ChatScreen> {
           IconButton(
               icon: Icon(Icons.close),
               onPressed: () {
-                //Implement logout functionality
+                //todo: Implement logout functionality
               }),
         ],
         title: Text('⚡️Chat'),
@@ -35,14 +37,14 @@ class _ChatScreenState extends State<ChatScreen> {
                   Expanded(
                     child: TextField(
                       onChanged: (value) {
-                        //Do something with the user input.
+                        //todo: Do something with the user input.
                       },
                       decoration: kMessageTextFieldDecoration,
                     ),
                   ),
                   FlatButton(
                     onPressed: () {
-                      //Implement send functionality.
+                      //todo:Implement send functionality.
                     },
                     child: Text(
                       'Send',
