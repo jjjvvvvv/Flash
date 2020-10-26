@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "653647397341",
+    "firebase_url": "https://flash-chat-33d22.firebaseio.com",
+    "project_id": "flash-chat-33d22",
+    "storage_bucket": "flash-chat-33d22.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:653647397341:android:91dfd2695ae939b3e3f634",
+        "android_client_info": {
+          "package_name": "co.virgaj.flash_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "653647397341-dvc3bkkj6302gk4nijara7q09q932tm6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyitU3d8l5SyO2xu6OtBYQiML_N4kusOE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "653647397341-dvc3bkkj6302gk4nijara7q09q932tm6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
