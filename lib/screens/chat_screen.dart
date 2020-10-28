@@ -8,7 +8,6 @@ User loggedInUser;
 
 class ChatScreen extends StatefulWidget {
   static const String id = 'chat';
-
   @override
   _ChatScreenState createState() => _ChatScreenState();
 }
@@ -165,7 +164,8 @@ class MessageBubble extends StatelessWidget {
         children: <Widget>[
           Padding(
             padding: EdgeInsets.fromLTRB(0, 0, 0, 3.0),
-            child: Text(sender, style: TextStyle(fontSize: 12.0)),
+            child: Text(sender,
+                style: TextStyle(fontSize: 12.0, color: Colors.black54)),
           ),
           Material(
             borderRadius: BorderRadius.only(
@@ -179,7 +179,7 @@ class MessageBubble extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
               child: Text(
-                '$text',
+                text,
                 style: TextStyle(fontSize: 20.0, color: textColor),
               ),
             ),
