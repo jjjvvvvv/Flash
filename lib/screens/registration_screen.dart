@@ -20,6 +20,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final userTextController = TextEditingController();
+    final passTextController = TextEditingController();
     return Scaffold(
       backgroundColor: Colors.white,
       body: ModalProgressHUD(
@@ -43,6 +45,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 height: 48.0,
               ),
               TextField(
+                controller: userTextController,
                 keyboardType: TextInputType.emailAddress,
                 textAlign: TextAlign.center,
                 onChanged: (value) {
@@ -56,6 +59,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 height: 8.0,
               ),
               TextField(
+                controller: passTextController,
                 obscureText: true,
                 textAlign: TextAlign.center,
                 onChanged: (value) {
@@ -72,6 +76,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 title: 'Sign Up',
                 color: Colors.blueAccent,
                 onPressed: () async {
+                  userTextController.clear();
+                  passTextController.clear();
                   setState(() {
                     showSpinner = true;
                   });

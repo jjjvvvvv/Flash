@@ -124,7 +124,6 @@ class MessagesStream extends StatelessWidget {
               text: messageText,
               isMe: currentUser == messageSender,
             );
-            // todo: time = messageTime;
             messageBubbles.add(messageBubble);
           }
           return Expanded(
